@@ -15,5 +15,8 @@ files[] = {"id":"27082362-669522ea-3734-4b24-9aeb-55c26b91487a","path":"Pokemon 
 
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"index.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
+type = openapi:3
+rootFiles[] = index.yaml
