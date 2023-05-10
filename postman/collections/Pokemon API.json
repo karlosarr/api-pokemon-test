@@ -8,6 +8,27 @@
 	"item": [
 		{
 			"name": "Pokemon",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "03e6fda4-0a15-4816-98f7-52fb3c4bfda9",
+						"exec": [
+							"tests[\"Status Code 200\"] = responseCode.code === 200;",
+							"",
+							"try {",
+							"    const responseJson = JSON.parse(responseBody)",
+							"    tests[\"Response Data OK\"] = responseJson.count > 0;",
+							"}",
+							"catch (e) {",
+							"    tests[\"Response Data OK\"] = false",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "802a179e-c56a-4118-817e-38f8a52cc57b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -33,6 +54,27 @@
 		},
 		{
 			"name": "Pokémon Pikachu",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cce6d1f3-9c13-4657-869a-849c675a696b",
+						"exec": [
+							"tests[\"Status Code 200\"] = responseCode.code === 200;",
+							"",
+							"try {",
+							"    const responseJson = JSON.parse(responseBody)",
+							"    tests[\"Response Data OK\"] = responseJson.name === 'pikachu';",
+							"}",
+							"catch (e) {",
+							"    tests[\"Response Data OK\"] = false",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "6dfac535-b613-41b0-a469-cf9654c0a471",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
